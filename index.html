@@ -41,13 +41,15 @@
      */
     var time=new Date().getTime();
     var timeStamp=time.toString();
+    console.log(timeStamp);
     var noceStr = Math.random().toString(36).substr(2);
+    console.log(noceStr)
     wx.config({
         debug: false,
         appId: 'wx354c6df39bc7e275',
         timestamp: timeStamp,
         nonceStr: noceStr,
-        signature: "MD5",
+        signature:'CmNdiTxZPL1JrTeqlRFCzz6xw0jtQtKK',
         jsApiList: [
             'chooseImage',
             'previewImage',
