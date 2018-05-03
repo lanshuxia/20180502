@@ -10,7 +10,18 @@
  * 閭欢鍐呭璇存槑锛氱敤绠€鏄庣殑璇█鎻忚堪闂鎵€鍦紝骞朵氦浠ｆ竻妤氶亣鍒拌闂鐨勫満鏅紝鍙檮涓婃埅灞忓浘鐗囷紝寰俊鍥㈤槦浼氬敖蹇鐞嗕綘鐨勫弽棣堛€�
  */
 wx.ready(function () {
-
+    // 1 鍒ゆ柇褰撳墠鐗堟湰鏄惁鏀寔鎸囧畾 JS 鎺ュ彛锛屾敮鎸佹壒閲忓垽鏂�
+    document.querySelector('#checkJsApi').onclick = function () {
+        wx.checkJsApi({
+            jsApiList: [
+                'getNetworkType',
+                'previewImage'
+            ],
+            success: function (res) {
+                alert(JSON.stringify(res));
+            }
+        });
+    };
 
     // 2. 鍒嗕韩鎺ュ彛
     // 2.1 鐩戝惉鈥滃垎浜粰鏈嬪弸鈥濓紝鎸夐挳鐐瑰嚮銆佽嚜瀹氫箟鍒嗕韩鍐呭鍙婂垎浜粨鏋滄帴鍙�
