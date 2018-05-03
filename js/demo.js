@@ -272,6 +272,7 @@ wx.ready(function () {
         serverId: []
     };
     document.querySelector('#chooseImage').onclick = function () {
+        alert(12)
         wx.chooseImage({
             success: function (res) {
                 images.localId = res.localIds;
